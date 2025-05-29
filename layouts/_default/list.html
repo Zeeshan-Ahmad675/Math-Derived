@@ -6,7 +6,7 @@
             <div id="divgrid">
                 {{ range sort ( where .Site.Pages "Type" "chapter" ) ".Params.sort" }}
 
-                    <a href={{ .Permalink }}>
+                    <a href="{{ .RelPermalink }}">
                         <div class="chbox">
                             <img src={{ .Params.image }} alt={{ .Title }} style="width: 300px; padding-top: 8px; background: white;"/>
 

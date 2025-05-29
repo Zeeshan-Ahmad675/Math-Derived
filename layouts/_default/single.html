@@ -1,5 +1,10 @@
 {{ define "main"}}
     <main>
+        {{ if eq .Type "topic"}}
+            <center><h1 style="font-weight: 200;">{{ .Title }}</h1></center>
+            <hr>
+        {{ end }}
+
         {{ .Content }}
 
         {{ if eq .Type "topic" }}
@@ -27,7 +32,7 @@
                 {{ end }}
 
                 {{ if $next }}
-                    <a class="next" href="{{ $next.RelPermalink }}">Next({{ $next.Title }}) →</a>
+                    <a class="next" href="{{ $next.RelPermalink }}">Next ({{ $next.Title }}) →</a>
                 {{ end }}
             </div>
         {{ end }}

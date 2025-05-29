@@ -13,7 +13,7 @@
         <div id="logo">
             <img src="/images/logo.png" width="40px;"/>
         </div>
-        <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
+        <div id="name">Math<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
         <div id="modebut" onclick="modechange()">
             <i id="sun" class="fa-solid fa-sun"></i>
             <i id="moon" class="fa-solid fa-moon" ></i>
@@ -27,13 +27,13 @@
         {{ if eq .RelPermalink "/chapters/" }}
 
             <div style="overflow: visible; height: 56px;" id="navchap">
-            <a href="{{ .Permalink }}" title="{{ .Title }}"><div class="nav-item" style="text-align: center;">{{ .Title }}</div></a>
+            <a href="{{ .RelPermalink }}" title="{{ .Title }}"><div class="nav-item" style="text-align: center;">{{ .Title }}</div></a>
             
             <div style="background-color: rgb(219, 217, 217);" id="chapterlist">
 
                 {{ range sort (where .Site.Pages "Type" "chapter") ".Params.sort" }}
 
-                <a href="{{ .Permalink }}"><div style="width: 100%; color: black; text-align: center;">{{ .Title }}</div></a>
+                <a href="{{ .RelPermalink }}"><div style="width: 100%; color: black; text-align: center;">{{ .Title }}</div></a>
 
                 {{ end }}
                 
@@ -42,7 +42,7 @@
 
         {{ else }}
 
-            <a href="{{ .Permalink }}" title="{{ .Title }}"><div class="nav-item">{{ .Title }}</div></a>
+            <a href="{{ .RelPermalink }}" title="{{ .Title }}"><div class="nav-item">{{ .Title }}</div></a>
 
         {{ end }}
     {{ end }}

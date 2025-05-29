@@ -11,7 +11,7 @@ sort = 1
 <h4 id="welh4" style="text-align: center;">Welcome to the
 library of concepts of Mathematics!</h4>
 
-<p style="margin-top:0;">Here you can learn mathematics from the basics and through derivations. Explore the available chapters below.</p>
+<p style="margin-top:0;">Here you can learn Mathematics from the basics and through derivations, with a spectial attention to problem solving too. Explore the available chapters below.</p>
 
 ***
 

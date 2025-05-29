@@ -6,4 +6,5 @@ description = ''
 type = ''
 image = ''
 sort = ''
+math = 'true'
 +++

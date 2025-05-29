@@ -18,7 +18,7 @@ Linear Algebra is a branch of mathematics dealing with the study of vectors, mat
 - Machine Learning
 - Cryptography,
   
-and much more. on this platform, we would be covering the topics invloved from basics to up. 
+and much more. On this platform, we would be covering the topics invloved from bottom to up. 
 
 ___
 

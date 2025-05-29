@@ -117,10 +117,10 @@ nav{
     width: 180px;
     position: absolute;
     font-size: small;
-    border: 2px solid hsl(170, 100%, 50%);
+    /* border: 3px solid hsl(170, 100%, 50%); */
     border-radius: 15px;
     right: -40%;
-    margin-top: 1px;
+    /* margin-top: 1px; */
     overflow: hidden;
 }
 #chapterlist div{
@@ -540,7 +540,11 @@ th {
     from{transform: rotateZ(-45deg) translateY(-8.5px)}
 }
 
-
+@media screen and (max-width: 826px){
+    .mathbox{
+         overflow: auto;
+    }
+}
 
 
 
