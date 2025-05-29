@@ -107,6 +107,7 @@ $$
 
 As siad above, matrices are, in general, denoted by capilaized letters, such as \(A, B, C \dots,\) and its elements by the corresponding lowercase letters. The elements which lies at the intersection of the first row and first column would be denoted by \(a_{11}\). Similarly, \(a_{32}\) lies at the intersection of \(3\text{rd}\) row and \(2\text{nd}\) column. This is shown below:
 
+<div class="mathbox">
 $$
     A =\begin{bmatrix}
         a_{11} & \rule[.5ex]{10ex}{0.5pt} \\
@@ -120,9 +121,11 @@ $$
         \rule[.5ex]{2ex}{0.5pt} & \rule[-1ex]{0.5pt}{2ex} & \rule[.5ex]{2ex}{0.5pt} & \rule[.5ex]{2ex}{0.5pt}  \\
     \end{bmatrix}_{4\times 4}
 $$
+</div>
 
 In general, for an element lying at the intersection of \(r\)-th row and \(c\)-th column would be \(a_{rc}\). Then, a \(m\times n\) matrix, \(A\) would be written as:
 
+<div class="mathbox">
 $$
     A = \begin{bmatrix}
         a_{11} & a_{12} & a_{13} & \dots & a_{1n} \\
@@ -132,6 +135,7 @@ $$
         a_{m1} & a_{m2} & a_{m3} & \dots & a_{mn} \\
     \end{bmatrix}_{m\times n}
 $$
+</div>
 
 But, as can be seen this can become very large for higher order matrices. So, we intoduce another compact notation. For the above matrix \(A\), we can write:
 
@@ -183,6 +187,7 @@ $$
 
 Then, 
 
+<div class="mathbox">
 $$  
     \begin{align}
         R &= A + B
@@ -204,9 +209,11 @@ $$
         \end{bmatrix}
     \end{align}.
 $$
+</div>
 
 This is as simple as that. Hence, we can write:
 
+<div class="mathbox">
 $$ 
     R = A + B  = 
     \begin{bmatrix}
@@ -220,3 +227,4 @@ $$
         a_{ij} + b_{ij}
     \end{bmatrix}_{m\times n}}
 $$
+</div>

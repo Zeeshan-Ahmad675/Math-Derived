@@ -478,6 +478,20 @@ th {
     display: none;
 }
 
+mjx-container[display="true"] {
+    font-size: 110% !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin-left: 6% !important;
+    padding: 20px;
+}
+
+
+mjx-mtable {
+    text-align: left !important;
+    margin-left: 10px;
+}
+
 
 @media screen and (max-width: 645px) {
     .imgdiv{
@@ -491,6 +505,7 @@ th {
     margin-left: 0;
     }
 }
+
 @media screen and (max-width: 700px) {
     .table25{
         display: table;
