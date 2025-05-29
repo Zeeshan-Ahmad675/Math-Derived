@@ -2,8 +2,8 @@
     <main>
         {{ .Content }}
 
-        <div id="divgrid">
-            {{ if not (eq .Type "chapter") }}
+        {{ if not (eq .Type "chapter") }}
+            <div id="divgrid">
                 {{ range sort ( where .Site.Pages "Type" "chapter" ) ".Params.sort" }}
 
                     <a href={{ .Permalink }}>
@@ -15,17 +15,19 @@
                     </a>
 
                 {{ end }}
+            </div>
 
-            {{else}}
-                <ol style="margin-left: 30px;">
-                {{ range sort ( where .CurrentSection.Pages "Type" "topic" ) ".Params.sort" }}
+        {{else}}
 
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            <ol style="margin-left: 30px;">
+            {{ range sort ( where .CurrentSection.Pages "Type" "topic" ) ".Params.sort" }}
 
-                {{ end }}
-                </ol>
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+
             {{ end }}
-        </div>
+            </ol>
+
+        {{ end }}
         
     </main>
 {{ end }}

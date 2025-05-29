@@ -50,7 +50,7 @@ function modechange() {
         if(moon){moon.style.display = "none";}
         if(main){ 
             main.style.backgroundColor = "white";
-            main.style.boxShadow = "0 0 4px black" 
+            // main.style.boxShadow = "0 0 4px black" 
         }
         // fixedmodediv.title = "Dark Mode Toggle";
         
@@ -111,7 +111,7 @@ function modechange() {
         if(moon){moon.style.display = "block";}
 
         if(main){
-            main.style.boxShadow = "0 0 4px white";
+            // main.style.boxShadow = "0 0 4px white";
             main.style.backgroundColor = "hsl(216, 5%, 18%)";
         }
         // fixedmodediv.title = "Light Mode Toggle";
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(moon){moon.style.display = "none";}
         if(main){ 
             main.style.backgroundColor = "white";
-            main.style.boxShadow = "0 0 4px black" 
+            // main.style.boxShadow = "0 0 4px black" 
         }
         // fixedmodediv.title = "Dark Mode Toggle";
         
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(moon){moon.style.display = "block";}
 
         if(main){
-            main.style.boxShadow = "0 0 4px white";
+            // main.style.boxShadow = "0 0 4px white";
             main.style.backgroundColor = "hsl(216, 5%, 18%)";
         }
         // fixedmodediv.title = "Light Mode Toggle";

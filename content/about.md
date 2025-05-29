@@ -11,7 +11,7 @@ sort = 2
 
         
 Math Derived is under the parent website,
-<a href="https://phyiscsderived.club" class="extlink">Physics Derived</a>. It is a website for academics and students of mathematics, engineering and related fields. With your support, we are working to make this website a mathematical concepts library.
+<a href="https://physicsderived.club" class="extlink">Physics Derived</a>. It is a website for academics and students of mathematics, engineering and related fields. With your support, we are working to make this website a mathematical concepts library.
 
 ___
 
