@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/6b5f9e533c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
+    {{/*  <meta name="description" content="{{ .Description }}">  */}}
     <title>{{ .Title }}</title>
     {{ if .Param "math" }}
         {{ partialCached "math.html" . }}

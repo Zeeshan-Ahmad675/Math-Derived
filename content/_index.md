@@ -2,7 +2,7 @@
 date = '2025-05-27T18:54:04+05:30'
 draft = false
 title = 'Home'
-description = ''
+description = 'Math Derived is a website for the concepts of Mathematics.'
 type = 'nav'
 sort = 1
 +++

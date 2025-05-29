@@ -8,9 +8,9 @@ image = '/images/linalgebra.png'
 sort = 1
 +++
 
-# Linear Algebra
+<center><h1>Linear Algebra</h1></center>
 
-Linear Algebra is the study of vectors, matices, vector spaces and related realms. It's called *linear* as the quantities studied here follows linearity. It has remarkable uses in many fields, such as 
+Linear Algebra is a branch of mathematics dealing with the study of vectors, matices, vector spaces and related realms. It's called *linear* as the quantities studied here follows linearity. It has remarkable uses in many fields, such as 
 
 - Quantum mechanics
 - Image Compression
@@ -18,7 +18,9 @@ Linear Algebra is the study of vectors, matices, vector spaces and related realm
 - Machine Learning
 - Cryptography,
   
-and many more. We would be covering the topics from basics to up. 
+and much more. on this platform, we would be covering the topics invloved from basics to up. 
+
+___
 
 <h3 style="font-weight: 200;">This chapter includes:</h3>
 

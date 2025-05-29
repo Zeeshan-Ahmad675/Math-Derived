@@ -28,7 +28,7 @@
       top: -10px;
     }
   </style>
-
+  <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
   <meta property="og:site_name" content="Physics Derived">
   <meta property="og:title" content="Page Not Found">
 </head>
@@ -72,36 +72,18 @@
   <script>
     
     const path = window.location.pathname;
-    const term = decodeURIComponent(path.split('/').pop().replace('.html', '').replace(/[-_]/g, ' '));
+    const term = decodeURIComponent(path.split('/').pop().replace('.html', '').replace(/[-_]/g, ''));
 
     const suggestions = [
       // General Pages
-      { keyword: 'vector', title: 'Vectors (chapter)', url: '/chapters/vectors' },
-      { keyword: 'math', title: 'Mathematical methods', url: '/chapters/Mathematical_methods_in_physics' },
-      { keyword: 'about', title: 'About Us', url: '/about' },
+      { keyword: 'algeb', title: 'Linear Algebra (chapter)', url: '/chapters/linear_algebra' },
+      { keyword: 'calcu', title: 'Single Variable Calcullus', url: '/chapters/Msingle_variable_calculus' },
+      { keyword: 'abou', title: 'About Us', url: '/about' },
       { keyword: 'contact', title: 'Contact Us', url: '/contact' },
       { keyword: 'feedback', title: 'Feedback', url: '/feedback' },
       { keyword: 'chapter', title: 'Chapters', url: '/chapters' }, 
       
-      // Vectors.html topics
-      { keyword: 'intro', title: 'Introduction (Vectors)', url: '/chapters/vectors#Introduction' },
-      { keyword: 'scalar', title: 'Scalars (topic)', url: '/chapters/vectors#Scalars' },
-      { keyword: 'vector', title: 'Vectors (topic)', url: '/chapters/vectors#Vectors' },
-      { keyword: 'addition', title: 'Addition of Vectors', url: '/chapters/vectors#Addition_of_Vectors' },
-      { keyword: 'triangle', title: 'Triangle Law', url: '/chapters/vectors#Triangle_Law' },
-      { keyword: 'parallelogram', title: 'Parallelogram Law', url: '/chapters/vectors#Parallelogram_Law' },
-      { keyword: 'differ', title: 'Difference of two Vectors', url: '/chapters/vectors#Difference_of_two_Vectors' },
-
-      // Mathematical_methods_in_physics.html topics
-      { keyword: 'geometry', title: 'Basic Geometry', url: '/chapters/Mathematical_methods_in_physics#basicgeometry' },
-      { keyword: 'pytha', title: 'Pythagoras Theorem', url: '/chapters/Mathematical_methods_in_physics#Pythagoras_Theorem' },
-      { keyword: 'distance', title: 'Distance Formula', url: '/chapters/Mathematical_methods_in_physics#Distance_Formula' },
-      { keyword: 'trig', title: 'Trigonometry', url: '/chapters/Mathematical_methods_in_physics#trigonometry' },
-      { keyword: 'pytha', title: 'Pythagorean Trigonometric Identities', url: '/chapters/Mathematical_methods_in_physics#Pythagorean_Trigonometric_Identities' },
-      { keyword: 'trig', title: 'Pythagorean Trigonometric Identities', url: '/chapters/Mathematical_methods_in_physics#Pythagorean_Trigonometric_Identities' },
-      { keyword: 'angle', title: 'Review and talk on angles', url: '/chapters/Mathematical_methods_in_physics#Review_and_talk_on_angles' },
-      { keyword: 'trig', title: 'Redefining trigonometric functions', url: '/chapters/Mathematical_methods_in_physics#Redefining_trigonometric_functions' },
-      { keyword: 'angle', title: 'Angle Sum relations', url: '/chapters/Mathematical_methods_in_physics#Angle_Sum_relations' },
+      
     ];
 
     // const match = suggestions.find(s => term.toLowerCase().includes(s.keyword));

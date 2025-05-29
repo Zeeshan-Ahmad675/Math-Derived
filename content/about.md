@@ -15,5 +15,5 @@ Math Derived is under the parent website,
 
 ___
 
-        
+
 **Get started** by navigating to [chapters](/chapters) and select any topic you did like to study now. All your [feedbacks](/feedback) are highly appreciated.

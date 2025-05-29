@@ -8,4 +8,7 @@ image = '/images/sinvcal.png'
 sort = 2
 +++
 
-# Topics are:
+<center><h1>Single Variable Calculus</h1></center>
+
+<h3 style="font-weight: 200;">This chapter includes:</h3>
+
