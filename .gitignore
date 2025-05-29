@@ -1,0 +1,12 @@
+# Hugo output
+/public/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+
+# Hugo build lock (if using Hugo Modules)
+.hugo_build.lock

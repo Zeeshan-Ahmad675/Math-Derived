@@ -1,0 +1,31 @@
+{{ define "main"}}
+    <main>
+        {{ .Content }}
+
+        <div id="divgrid">
+            {{ if not (eq .Type "chapter") }}
+                {{ range sort ( where .Site.Pages "Type" "chapter" ) ".Params.sort" }}
+
+                    <a href={{ .Permalink }}>
+                        <div class="chbox">
+                            <img src={{ .Params.image }} alt={{ .Title }} style="width: 300px; padding-top: 8px; background: white;"/>
+
+                            <h3 style="padding-top: 24px;">{{ .Title }}</h3>
+                        </div>
+                    </a>
+
+                {{ end }}
+
+            {{else}}
+                <ol style="margin-left: 30px;">
+                {{ range sort ( where .CurrentSection.Pages "Type" "topic" ) ".Params.sort" }}
+
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+
+                {{ end }}
+                </ol>
+            {{ end }}
+        </div>
+        
+    </main>
+{{ end }}

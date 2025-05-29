@@ -1,0 +1,50 @@
+<header>
+    <div id="lona">
+        <div id="navbar" onclick="ocnav()">
+            <div class="navdiv" id="navbar1"></div>
+            <div class="navdiv" id="navbar2"></div>
+            <div class="navdiv" id="navbar3"></div>
+        </div>
+        <div id="navclo" onclick="ocnav()">
+            <div class="navdiv" id="navclo1"></div>
+            <div class="navdiv" id="navclo2"></div>
+            <div class="navdiv" id="navclo3"></div>
+        </div>
+        <div id="logo">
+            <img src="/images/logo.png" width="40px;"/>
+        </div>
+        <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
+        <div id="modebut" onclick="modechange()">
+            <i id="sun" class="fa-solid fa-sun"></i>
+            <i id="moon" class="fa-solid fa-moon" ></i>
+        </div>
+    </div>
+    
+    <nav id="nav">
+
+    {{ range sort (where .Site.Pages "Type" "nav") ".Params.sort" }}
+
+        {{ if eq .RelPermalink "/chapters/" }}
+
+            <div style="overflow: visible; height: 56px;" id="navchap">
+            <a href="{{ .Permalink }}" title="{{ .Title }}"><div class="nav-item" style="text-align: center;">{{ .Title }}</div></a>
+            
+            <div style="background-color: rgb(219, 217, 217);" id="chapterlist">
+
+                {{ range sort (where .Site.Pages "Type" "chapter") ".Params.sort" }}
+
+                <a href="{{ .Permalink }}"><div style="width: 100%; color: black; text-align: center;">{{ .Title }}</div></a>
+
+                {{ end }}
+                
+            </div>
+            </div>
+
+        {{ else }}
+
+            <a href="{{ .Permalink }}" title="{{ .Title }}"><div class="nav-item">{{ .Title }}</div></a>
+
+        {{ end }}
+    {{ end }}
+    </nav>
+</header>

@@ -1,0 +1,35 @@
+{{ define "main"}}
+    <main>
+        {{ .Content }}
+
+        {{ if eq .Type "topic" }}
+            {{ $current := . }}
+            {{ $pages := sort (.CurrentSection.RegularPages) ".Params.sort" }}
+            {{ $prev := "" }}
+            {{ $next := "" }}
+
+            {{ range $i, $p := $pages }}
+                {{ if eq $p $current }}
+                    {{ if gt $i 0 }}
+                        {{ $prev = index $pages (sub $i 1) }}
+                    {{ end }}
+                    {{ if lt (add $i 1) (len $pages) }}
+                        {{ $next = index $pages (add $i 1) }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+
+            <div class="pagination" style="display: flex; justify-content: space-between;">
+                {{ if $prev }}
+                    <a class="prev" href="{{ $prev.RelPermalink }}">← Previous ({{ $prev.Title }})</a>
+                {{ else }}
+                    <span></span>
+                {{ end }}
+
+                {{ if $next }}
+                    <a class="next" href="{{ $next.RelPermalink }}">Next({{ $next.Title }}) →</a>
+                {{ end }}
+            </div>
+        {{ end }}
+    </main>
+{{ end }}

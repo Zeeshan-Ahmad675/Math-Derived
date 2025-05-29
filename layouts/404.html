@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <link rel="canonical" href="https://physicsderived.club/404">
+
+  <style>
+    body { 
+      font-family: sans-serif; 
+      text-align: center; 
+      margin-top: 50px; 
+    }
+
+    body a:link{
+      text-decoration: none;
+      color: hsl(920, 100%, 50%);
+    }
+
+    body a:visited{
+      color: hsl(263, 93%, 66%);
+    }
+
+    #logo404{
+      position: absolute;
+      left: -10px;
+      top: -10px;
+    }
+  </style>
+
+  <meta property="og:site_name" content="Physics Derived">
+  <meta property="og:title" content="Page Not Found">
+</head>
+<body>
+  <div style="background-color: white; width: 70px; 
+  height: 70px; margin: auto; border-radius: 80px; padding: 0; position: relative; margin-bottom: 30px;">
+    <a href="/"><img id="logo404" src="/images/nbgicon.png" alt="Website icon" width="100px;"></a>
+  </div>
+
+  <h1>404 - Page Not Found</h1>
+
+  <p style="margin: 0;">Sorry, the requested page doesn't exist.</p>
+
+  <div id="suggestion-box" style="margin:auto; width:auto"></div>
+  
+  <!-- <div style="margin:auto; width:auto;">
+    <p style="display: inline-block; margin-bottom: 8px;"><b>Were you looking for:</b></p>
+    <ul style="list-style-type:none; display: inline-block; padding: 0; padding-left: 3px; margin: 0; margin-bottom: 16px">
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+    </ul>
+  </div> -->
+  <p>You might like to  visit the website's <a href="/">Home Page</a>.</p>
+
+
+  <script src="/index.js"></script>
+
+  <script>
+    
+    const path = window.location.pathname;
+    const term = decodeURIComponent(path.split('/').pop().replace('.html', '').replace(/[-_]/g, ' '));
+
+    const suggestions = [
+      // General Pages
+      { keyword: 'vector', title: 'Vectors (chapter)', url: '/chapters/vectors' },
+      { keyword: 'math', title: 'Mathematical methods', url: '/chapters/Mathematical_methods_in_physics' },
+      { keyword: 'about', title: 'About Us', url: '/about' },
+      { keyword: 'contact', title: 'Contact Us', url: '/contact' },
+      { keyword: 'feedback', title: 'Feedback', url: '/feedback' },
+      { keyword: 'chapter', title: 'Chapters', url: '/chapters' }, 
+      
+      // Vectors.html topics
+      { keyword: 'intro', title: 'Introduction (Vectors)', url: '/chapters/vectors#Introduction' },
+      { keyword: 'scalar', title: 'Scalars (topic)', url: '/chapters/vectors#Scalars' },
+      { keyword: 'vector', title: 'Vectors (topic)', url: '/chapters/vectors#Vectors' },
+      { keyword: 'addition', title: 'Addition of Vectors', url: '/chapters/vectors#Addition_of_Vectors' },
+      { keyword: 'triangle', title: 'Triangle Law', url: '/chapters/vectors#Triangle_Law' },
+      { keyword: 'parallelogram', title: 'Parallelogram Law', url: '/chapters/vectors#Parallelogram_Law' },
+      { keyword: 'differ', title: 'Difference of two Vectors', url: '/chapters/vectors#Difference_of_two_Vectors' },
+
+      // Mathematical_methods_in_physics.html topics
+      { keyword: 'geometry', title: 'Basic Geometry', url: '/chapters/Mathematical_methods_in_physics#basicgeometry' },
+      { keyword: 'pytha', title: 'Pythagoras Theorem', url: '/chapters/Mathematical_methods_in_physics#Pythagoras_Theorem' },
+      { keyword: 'distance', title: 'Distance Formula', url: '/chapters/Mathematical_methods_in_physics#Distance_Formula' },
+      { keyword: 'trig', title: 'Trigonometry', url: '/chapters/Mathematical_methods_in_physics#trigonometry' },
+      { keyword: 'pytha', title: 'Pythagorean Trigonometric Identities', url: '/chapters/Mathematical_methods_in_physics#Pythagorean_Trigonometric_Identities' },
+      { keyword: 'trig', title: 'Pythagorean Trigonometric Identities', url: '/chapters/Mathematical_methods_in_physics#Pythagorean_Trigonometric_Identities' },
+      { keyword: 'angle', title: 'Review and talk on angles', url: '/chapters/Mathematical_methods_in_physics#Review_and_talk_on_angles' },
+      { keyword: 'trig', title: 'Redefining trigonometric functions', url: '/chapters/Mathematical_methods_in_physics#Redefining_trigonometric_functions' },
+      { keyword: 'angle', title: 'Angle Sum relations', url: '/chapters/Mathematical_methods_in_physics#Angle_Sum_relations' },
+    ];
+
+    // const match = suggestions.find(s => term.toLowerCase().includes(s.keyword));
+    // if (match) {
+    //   document.getElementById('suggestion-box').innerHTML = `
+    //     <p>Were you looking for: <a href="${match.url}">${match.title}</a></p>
+    //   `;
+    // }
+
+
+    const matches = suggestions.filter(s => term.toLowerCase().includes(s.keyword));
+    if (matches.length > 0) {
+      const links = matches.map(m => `<li style="display: inline-block"><a href="${m.url}">${m.title}</a></li>`).join(', ');
+      document.getElementById('suggestion-box').innerHTML = `
+      <p style="display: inline-block; margin-bottom: 8px;"><b>Were you looking for:</b></p>
+      <ul style="list-style-type:none; display: inline-block; padding-left: 3px; margin: 0; margin-bottom: 16px">${links}</ul>
+      `;
+    }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b5f9e533c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
+    <title>{{ .Title }}</title>
+    {{ if .Param "math" }}
+        {{ partialCached "math.html" . }}
+    {{ end }}
+</head>
+<body>
+    {{ partial "header" . }}
+    {{ block "main" . }} {{ end }}
+    {{ partial "footer" . }}
+
+    <script src="/js/index.js"></script>
+    <script src="/js/chscript.js"></script>
+</body>
+</html>
