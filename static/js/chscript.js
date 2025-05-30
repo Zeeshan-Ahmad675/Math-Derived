@@ -1,6 +1,7 @@
 let mainfnav = document.getElementById("mainfnav");
 let bfnavi = document.getElementById("bfnavi");
 let mainfnavHandled = false;
+let mathBoxes = document.querySelectorAll(".mathbox");
 
 
 if(mainfnav){
@@ -36,3 +37,32 @@ mainfnav.addEventListener("mouseleave", function() {
     bfnavi.style.display = "none";
 });
 }
+
+
+
+["load", "resize"].forEach(event => {
+    window.addEventListener(event, () => {
+        MathJax.typesetPromise().then(() => {
+            mathBoxes.forEach(mathbox => {
+                const mjx = mathbox.querySelector("mjx-container");
+
+                if (mjx) {
+                    requestAnimationFrame(() => {
+                        const contentWidth = mjx.scrollWidth;
+                        const boxWidth = mathbox.clientWidth;
+
+                        console.log("contentWidth:", contentWidth, "boxWidth:", boxWidth);
+
+                        if (contentWidth > boxWidth) {
+                            mathbox.style.overflowX = "auto";
+                        }
+                        else {
+                            mathbox.style.overflowX = "hidden";
+                        }
+                    });
+                }
+            });
+        });
+    });
+});
+

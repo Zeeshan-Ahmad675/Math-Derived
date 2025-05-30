@@ -72,6 +72,7 @@ $$
 
 Clearly, its order is \(2\times 4\), as, it has two *rows* (horizontal arrays): 
 
+<div class="mathbox">
 $$
     \begin{bmatrix}
         a & b & c & d
@@ -80,9 +81,11 @@ $$
         e & f & g & h
     \end{bmatrix}
 $$
+</div>
 
 and four *columns* (vertical arrays):
 
+<div class="mathbox">
 $$
     \begin{bmatrix}
         a\\ e \\
@@ -97,6 +100,7 @@ $$
         d\\ h \\
     \end{bmatrix}.
 $$
+</div>
 
 
 
@@ -172,6 +176,8 @@ $$
 
 where, \(a_{ij}\) and \(b_{ij}\) are the elements of matrices \(a\) and \(B\) respectively. Consider the following example: 
 
+
+<div class="mathbox">
 $$
     A = \begin{bmatrix}
         2 & 5 \\
@@ -184,6 +190,8 @@ $$
         4 & 16 \\
     \end{bmatrix}
 $$
+</div>
+
 
 Then, 
 

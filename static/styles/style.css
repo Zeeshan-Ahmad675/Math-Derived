@@ -555,12 +555,20 @@ mjx-mtable {
     from{transform: rotateZ(-45deg) translateY(-8.5px)}
 }
 
-@media screen and (max-width: 826px){
-    .mathbox{
-         overflow: auto;
-    }
+.mathbox {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray transparent;
+
 }
 
+.mathbox::-webkit-scrollbar {
+  height: 8px;
+}
+
+.mathbox::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 4px;
+}
 
 
 @media screen and (max-width: 726px){
