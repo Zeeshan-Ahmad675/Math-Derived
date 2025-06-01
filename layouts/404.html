@@ -44,7 +44,7 @@
 
   <script src="/index.js"></script>
 
-  <script>
+  <script defer>
     
     const path = window.location.pathname;
     const term = decodeURIComponent(path.split('/').pop().replace('.html', '').replace(/[-_]/g, ''));
@@ -52,7 +52,7 @@
     const suggestions = [
       // General Pages
       { keyword: 'algeb', title: 'Linear Algebra (chapter)', url: '/chapters/linear_algebra' },
-      { keyword: 'calcu', title: 'Single Variable Calcullus', url: '/chapters/Msingle_variable_calculus' },
+      { keyword: 'calcu', title: 'Single Variable Calcullus', url: '/chapters/single_variable_calculus' },
       { keyword: 'abou', title: 'About Us', url: '/about' },
       { keyword: 'contact', title: 'Contact Us', url: '/contact' },
       { keyword: 'feedback', title: 'Feedback', url: '/feedback' },

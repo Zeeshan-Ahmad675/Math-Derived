@@ -26,7 +26,7 @@
 
             <div class="pagination" style="display: flex; justify-content: space-between;">
                 {{ if $prev }}
-                    <a class="prev" href="{{ $prev.RelPermalink }}" style="color: rgb(255, 255, 255);">
+                    <a class="prev" href="{{ $prev.RelPermalink }}" style="color: rgb(255, 255, 255);" title="Previous section,  {{ $prev.Title }}">
                         <div class="preNextBut">← Previous ({{ $prev.Title }})</div>
                     </a>
                 {{ else }}
@@ -34,7 +34,7 @@
                 {{ end }}
 
                 {{ if $next }}
-                    <a class="next" href="{{ $next.RelPermalink }}" style="color: rgb(255, 255, 255);">
+                    <a class="next" href="{{ $next.RelPermalink }}" style="color: rgb(255, 255, 255);" title="Next section, {{ $next.Title }}">
                         <div class="preNextBut">Next ({{ $next.Title }}) →</div>
                     </a>
                         

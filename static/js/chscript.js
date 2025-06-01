@@ -22,20 +22,20 @@ if(mainfnav){
 
 
 
-mainfnav.addEventListener("mouseenter", function() {
-    if(!mainfnavHandled){
-        bfnavi.style.display = "block";
-    }
-    mainfnavHandled = true;
-    setTimeout(() => {
-        mainfnavHandled = false
-    }, 300);
-});
+    mainfnav.addEventListener("mouseenter", function() {
+        if(!mainfnavHandled){
+            bfnavi.style.display = "block";
+        }
+        mainfnavHandled = true;
+        setTimeout(() => {
+            mainfnavHandled = false
+        }, 300);
+    });
 
 
-mainfnav.addEventListener("mouseleave", function() {
-    bfnavi.style.display = "none";
-});
+    mainfnav.addEventListener("mouseleave", function() {
+        bfnavi.style.display = "none";
+    });
 }
 
 
