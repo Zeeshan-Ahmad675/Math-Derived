@@ -109,7 +109,7 @@ $$
 - **<u>Notation</u>:**
 { class = c1ul, id = notation}
 
-As siad above, matrices are, in general, denoted by capilaized letters, such as \(A, B, C \dots,\) and its elements by the corresponding lowercase letters. The elements which lies at the intersection of the first row and first column would be denoted by \(a_{11}\). Similarly, \(a_{32}\) lies at the intersection of \(3\text{rd}\) row and \(2\text{nd}\) column. This is shown below:
+As said above, matrices are, in general, denoted by capilaized letters, such as \(A, B, C \dots,\) and its elements by the corresponding lowercase letters. The elements which lies at the intersection of the first row and first column would be denoted by \(a_{11}\). Similarly, \(a_{32}\) lies at the intersection of \(3\text{rd}\) row and \(2\text{nd}\) column. This is shown below:
 
 <div class="mathbox">
 $$
@@ -174,7 +174,7 @@ $$
     r_{ij} = a_{ij} + b_{ij}\;,
 $$
 
-where, \(a_{ij}\) and \(b_{ij}\) are the elements of matrices \(a\) and \(B\) respectively. Consider the following example: 
+where, \(a_{ij}\) and \(b_{ij}\) are the elements of matrices \(A\) and \(B\) respectively. Consider the following example: 
 
 
 <div class="mathbox">
@@ -215,7 +215,7 @@ $$
             9 & 10 \\
             9 & 22 \\
         \end{bmatrix}
-    \end{align}.
+    \end{align}
 $$
 </div>
 

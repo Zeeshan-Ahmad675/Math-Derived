@@ -385,6 +385,17 @@ main{
 
 
 
+/* Previous Next Button */
+
+.preNextBut{
+    padding: 5px;
+    font-size: 0.9em;
+    background-color: hsl(207, 100%, 50%);
+    /* font-weight: bold; */
+    /* font-style: italic; */
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+}
 
 
 

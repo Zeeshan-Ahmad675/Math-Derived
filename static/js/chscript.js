@@ -51,8 +51,6 @@ mainfnav.addEventListener("mouseleave", function() {
                         const contentWidth = mjx.scrollWidth;
                         const boxWidth = mathbox.clientWidth;
 
-                        console.log("contentWidth:", contentWidth, "boxWidth:", boxWidth);
-
                         if (contentWidth > boxWidth) {
                             mathbox.style.overflowX = "auto";
                         }
