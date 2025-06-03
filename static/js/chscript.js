@@ -40,27 +40,31 @@ if(mainfnav){
 
 
 
-["load", "resize"].forEach(event => {
-    window.addEventListener(event, () => {
-        MathJax.typesetPromise().then(() => {
-            mathBoxes.forEach(mathbox => {
-                const mjx = mathbox.querySelector("mjx-container");
+if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+    MathJax.startup.promise.then(() => {
+        ["load", "resize"].forEach(event => {
+            window.addEventListener(event, () => {
+                MathJax.typesetPromise().then(() => {
+                    mathBoxes.forEach(mathbox => {
+                        const mjx = mathbox.querySelector("mjx-container");
 
-                if (mjx) {
-                    requestAnimationFrame(() => {
-                        const contentWidth = mjx.scrollWidth;
-                        const boxWidth = mathbox.clientWidth;
+                        if (mjx) {
+                            requestAnimationFrame(() => {
+                                const contentWidth = mjx.scrollWidth;
+                                const boxWidth = mathbox.clientWidth;
 
-                        if (contentWidth > boxWidth) {
-                            mathbox.style.overflowX = "auto";
-                        }
-                        else {
-                            mathbox.style.overflowX = "hidden";
+                                if (contentWidth > boxWidth) {
+                                    mathbox.style.overflowX = "auto";
+                                }
+                                else {
+                                    mathbox.style.overflowX = "hidden";
+                                }
+                            });
                         }
                     });
-                }
+                });
             });
         });
     });
-});
+}
 
