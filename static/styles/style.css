@@ -26,20 +26,6 @@ p{
     line-height: 1.5;
 }
 
-mjx-container[display="true"] {
-    font-size: 110% !important;
-    text-align: left !important;
-    width: 100% !important;
-    margin-left: 6% !important;
-    padding: 20px;
-}
-
-
-mjx-mtable {
-    text-align: left !important;
-    margin-left: 10px;
-}
-
 
 main{
     width: 85%;
@@ -503,6 +489,26 @@ mjx-mtable {
     margin-left: 10px;
 }
 
+.imgdiv{
+    overflow: auto;
+}
+
+.mathbox,.imgdiv {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray transparent;
+
+}
+
+.mathbox::-webkit-scrollbar {
+  height: 8px;
+}
+
+.mathbox::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 4px;
+}
+
+
 
 @media screen and (max-width: 645px) {
     .imgdiv{
@@ -566,20 +572,6 @@ mjx-mtable {
     from{transform: rotateZ(-45deg) translateY(-8.5px)}
 }
 
-.mathbox {
-  scrollbar-width: thin;
-  scrollbar-color: darkgray transparent;
-
-}
-
-.mathbox::-webkit-scrollbar {
-  height: 8px;
-}
-
-.mathbox::-webkit-scrollbar-thumb {
-  background-color: darkgray;
-  border-radius: 4px;
-}
 
 
 @media screen and (max-width: 726px){
