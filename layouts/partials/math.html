@@ -1,12 +1,20 @@
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
-      inlineMath: [['\\(', '\\)']]                  // inline
-    },
-    loader:{
-      load: ['ui/safe']
-    },
-  };
+    MathJax = {
+        loader: { load: ['input/tex'] },
+        output: {
+            displayAlign: 'left',
+            displayOverflow: 'linebreak',
+            linebreaks: {
+                inline: true,
+                width: '100%',
+                lineleading: .3,
+                LinebreakVisitor: null,
+            }
+        },
+        tex: {
+            inlineMath: [['$', '$'], ["\\(", "\\)"]],
+            processEscapes: true,
+        },
+    };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.4/tex-mml-chtml.js" async></script>

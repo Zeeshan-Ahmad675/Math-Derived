@@ -673,5 +673,26 @@ mjx-mtable {
         flex-direction: column;
         align-items: center;
     }
+    .c1fdiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: ; */
+        /* align-items: center; */
+    }
+    .c1fdiv p{
+        margin-left: 25px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .c1fdiv > p{
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .c2fdiv{
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
 }
 
