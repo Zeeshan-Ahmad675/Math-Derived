@@ -13,6 +13,9 @@
     {{ end }}
 </head>
 <body>
+    {{ if eq .Type "topic"}}
+        {{ partial "loader" . }}
+    {{ end }}
     {{ partial "header" . }}
     {{ block "main" . }} {{ end }}
     {{ partial "footer" . }}
